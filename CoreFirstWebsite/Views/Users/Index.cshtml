@@ -1,0 +1,15 @@
+﻿@using CoreFirstWebsite.Models.Users
+@model UsersListViewModel
+
+
+<div>
+    <i>Nombre d'utilisateurs à afficher : @Model.ListUsers.Count() </i>
+</div>
+<div class="shadow m-3">
+    @foreach(var user in Model.ListUsers)
+    {
+        <p class="text-bold">@user.Name</p>
+        <p>@user.Surname</p>
+        <a class="btn btn-primary" href="mailto:@user.Mail" target="_blank">Envoyer un mail</a>
+    }
+</div>

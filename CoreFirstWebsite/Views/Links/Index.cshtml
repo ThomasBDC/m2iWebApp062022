@@ -1,0 +1,25 @@
+﻿@using CoreFirstWebsite.Models.Links
+@model LinksListViewModel
+
+<h1>Coucou</h1>
+
+<div>
+    <i>Nombre de liens à afficher : @Model.AllLinks.Count() </i>
+</div>
+<div class="shadow m-3">
+    @foreach(var lien in Model.AllLinks)
+    {
+        <p class="text-bold">@lien.Name</p>
+        <p>@lien.Description</p>
+        <a class="btn btn-primary" href="@lien.Url" target="_blank">Go !</a>
+    }
+</div>
+
+<div class="shadow m-3">
+    @foreach(var user in Model.AllUsers)
+    {
+        <p class="text-bold">@user.Name</p>
+        <p>@user.Surname</p>
+        <a class="btn btn-primary" href="mailto:@user.Mail" target="_blank">Envoyer un mail</a>
+    }
+</div>
