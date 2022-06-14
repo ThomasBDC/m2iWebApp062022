@@ -1,0 +1,11 @@
+﻿@model NetFrameworkm2i.Models.LinkViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach(var monLien in Model.AllLinks)
+{
+    <p>@monLien.Name</p>
+}

@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\m2iWebApp.Models\m2iWebApp.Models.csproj" />
+  </ItemGroup>
+
 </Project>
