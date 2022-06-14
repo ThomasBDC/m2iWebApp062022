@@ -2,14 +2,35 @@
 @model UsersListViewModel
 
 
+@{
+    ViewData["Title"] = "Les utilisateurs";
+}
+
+<h1>@ViewData["Title"] <i class="fa-solid fa-circle-check"></i></h1>
+
 <div>
     <i>Nombre d'utilisateurs à afficher : @Model.ListUsers.Count() </i>
 </div>
 <div class="shadow m-3">
     @foreach(var user in Model.ListUsers)
     {
+        <a class="btn btn-secondary" asp-controller="Users" asp-action="GetUser"
+            asp-route-idUser="@user.Id">Modifier</a>
         <p class="text-bold">@user.Name</p>
         <p>@user.Surname</p>
         <a class="btn btn-primary" href="mailto:@user.Mail" target="_blank">Envoyer un mail</a>
     }
 </div>
+@await Html.PartialAsync("_reseauxSociaux")
+
+@section Scripts{
+    <script src="~/js/Users/index.js" asp-append-version="true"></script>
+    <script>
+        alert("Vous allez voir "+@Model.ListUsers.Count+" utilisateurs");
+    </script>
+}
+
+
+@section LesFichiersCss{
+    <link rel="stylesheet" href="~/css/Users/index.css" />
+}

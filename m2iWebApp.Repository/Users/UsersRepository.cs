@@ -20,13 +20,13 @@ namespace m2iWebApp.Repository.Users
                     },
                     new UserModel()
                     {
-                        Id = 1,
+                        Id = 2,
                         Name = "HADJIOUAL",
                         Surname = "Leila",
                         Mail = "HADJIOUALLeila@yopmail.com"
                     },new UserModel()
                     {
-                        Id = 1,
+                        Id = 3,
                         Name = "NIBBIO",
                         Surname = "Julien",
                         Mail = "nibbioJulien@yopmail.com"

@@ -1,0 +1,24 @@
+﻿@using m2iWebApp.Models
+@model UserModel
+
+@{
+    ViewData["Title"] = @Model.Name;
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form>
+    <input type="hidden" asp-for="Id" />
+    @Html.TextBoxFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Surname)
+    @Html.TextBoxFor(model => model.Mail)
+</form>
+@await Html.PartialAsync("_reseauxSociaux")
+
+@section Scripts{
+
+}
+
+@section LesFichiersCss{
+
+}

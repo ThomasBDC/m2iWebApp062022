@@ -1,0 +1,1 @@
+﻿alert("On est sur la page des liens, trop bien !");

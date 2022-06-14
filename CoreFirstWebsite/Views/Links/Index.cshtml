@@ -1,7 +1,14 @@
 ﻿@using CoreFirstWebsite.Models.Links
 @model LinksListViewModel
 
-<h1>Coucou</h1>
+@{
+    ViewData["Title"] = "Les Liens";
+    Layout = "_newLayout";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@await Html.PartialAsync("_reseauxSociaux")
 
 <div>
     <i>Nombre de liens à afficher : @Model.AllLinks.Count() </i>
@@ -9,6 +16,10 @@
 <div class="shadow m-3">
     @foreach(var lien in Model.AllLinks)
     {
+        <a class="btn btn-secondary" 
+            asp-controller="Links" 
+            asp-action="Link" 
+            asp-route-idLien="@lien.Id" >Modifier</a>
         <p class="text-bold">@lien.Name</p>
         <p>@lien.Description</p>
         <a class="btn btn-primary" href="@lien.Url" target="_blank">Go !</a>
@@ -23,3 +34,13 @@
         <a class="btn btn-primary" href="mailto:@user.Mail" target="_blank">Envoyer un mail</a>
     }
 </div>
+
+
+@section Scripts{
+    <script src="~/js/Links/index.js" asp-append-version="true"></script>
+}
+
+@section LesFichiersCss{
+    <!-- Sera dans la section les fichiers CSS -->
+    <link rel="stylesheet" href="~/css/Links/index.css" />
+}

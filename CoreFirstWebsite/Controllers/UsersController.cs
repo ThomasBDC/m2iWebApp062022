@@ -3,6 +3,7 @@ using m2iWebApp.Models;
 using m2iWebApp.Repository.Users;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CoreFirstWebsite.Controllers
 {
@@ -18,6 +19,15 @@ namespace CoreFirstWebsite.Controllers
             };
 
             return View(vm);
+        }
+
+        public IActionResult GetUser(int idUser)
+        {
+            List<UserModel> allUsers = UsersRepository.getAllUsers();
+
+            var monUser = allUsers.FirstOrDefault(u => u.Id == idUser);
+
+            return View(monUser);
         }
     }
 }

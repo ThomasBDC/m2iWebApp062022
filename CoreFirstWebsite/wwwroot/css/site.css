@@ -69,3 +69,16 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.social-bar {
+    position: fixed;
+    left: 15px;
+    bottom: 15%;
+    display: flex;
+    padding: 15px;
+    background: wheat;
+    height: 200px;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 30px;
+}
