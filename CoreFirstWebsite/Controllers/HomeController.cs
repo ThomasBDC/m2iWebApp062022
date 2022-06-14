@@ -17,7 +17,7 @@ namespace CoreFirstWebsite.Controllers
         {
             _logger = logger;
         }
-
+                
         public IActionResult Index()
         {
             return View();

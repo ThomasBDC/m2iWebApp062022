@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace CoreFirstWebsite
 {
+
     public class MonVCViewComponent : ViewComponent
     {
         public async Task<IViewComponentResult> InvokeAsync()
         {
             //Mettre du code C#
-
             var allLinks = LinksRepository.getAllLinks();
 
             var vm = new LinksListViewModel

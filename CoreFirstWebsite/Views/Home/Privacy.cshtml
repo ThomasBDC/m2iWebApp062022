@@ -4,3 +4,6 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+@await Component.InvokeAsync("Modal", new CoreFirstWebsite.ViewComponents.
+        ModalViewModel("Ici c'est privée","description de ma modal, mais privée"))
