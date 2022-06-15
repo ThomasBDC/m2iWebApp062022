@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "asp.net MVC 5", "asp.net MV
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetFrameworkm2i", "NetFrameworkm2i\NetFrameworkm2i.csproj", "{FC49E9FF-85CA-4EC8-A8F7-140E14C0C6E6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiNetCore", "ApiNetCore", "{E2D2C107-4421-42F5-909D-60B2DE0CC078}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiNetCore", "ApiNetCore\ApiNetCore.csproj", "{F9945C57-8623-4C9E-9B83-D0B540410556}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,10 @@ Global
 		{FC49E9FF-85CA-4EC8-A8F7-140E14C0C6E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC49E9FF-85CA-4EC8-A8F7-140E14C0C6E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC49E9FF-85CA-4EC8-A8F7-140E14C0C6E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9945C57-8623-4C9E-9B83-D0B540410556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9945C57-8623-4C9E-9B83-D0B540410556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9945C57-8623-4C9E-9B83-D0B540410556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9945C57-8623-4C9E-9B83-D0B540410556}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +54,7 @@ Global
 		{50990177-BF43-45D5-A146-1E2963D9AA0F} = {DBE4AE53-8D37-4839-8E31-E98F174BD8FD}
 		{32C1703A-D800-43F7-AEC6-EFC6DAB1B68C} = {DBE4AE53-8D37-4839-8E31-E98F174BD8FD}
 		{FC49E9FF-85CA-4EC8-A8F7-140E14C0C6E6} = {ED80BB6E-03EA-41AB-8C71-DF121D4CA56F}
+		{F9945C57-8623-4C9E-9B83-D0B540410556} = {E2D2C107-4421-42F5-909D-60B2DE0CC078}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D8FB178-402A-49E9-B79B-6237889D0EEB}
