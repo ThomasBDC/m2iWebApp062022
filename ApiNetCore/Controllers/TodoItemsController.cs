@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ApiNetCore.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace ApiNetCore.Controllers
 {
@@ -22,8 +24,29 @@ namespace ApiNetCore.Controllers
 
         // GET: api/TodoItems
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
         {
+            //Récupérer les infos de l'utilisateur
+            var utilisateurConnecte = HttpContext.User.Identity as ClaimsIdentity;
+
+            if (utilisateurConnecte != null)
+            {
+                var userClaims = utilisateurConnecte.Claims;
+
+                var authUser = new AuthModel
+                {
+                    Username = userClaims.FirstOrDefault(o => o.Type == ClaimTypes.NameIdentifier)?.Value,
+                    EmailAddress = userClaims.FirstOrDefault(o => o.Type == ClaimTypes.Email)?.Value,
+                    GivenName = userClaims.FirstOrDefault(o => o.Type == ClaimTypes.GivenName)?.Value,
+                    Surname = userClaims.FirstOrDefault(o => o.Type == ClaimTypes.Surname)?.Value,
+                    Role = userClaims.FirstOrDefault(o => o.Type == ClaimTypes.Role)?.Value
+                };
+
+                int c = 0;
+                    c++;
+            }
+
             return await _context.TodoItems.ToListAsync();
         }
 
